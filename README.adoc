@@ -14,8 +14,9 @@ oc policy add-role-to-user view system:serviceaccount:workshop:default
 
 === Deploy from source code
 
+Deploy using S2I strategy with openjdk11 as base image.
 ----
-oc new-app https://github.com/openshift-roadshow/nationalparks.git
+oc new-app registry.access.redhat.com/ubi8/openjdk-11~https://github.com/openshift-roadshow/nationalparks.git
 ----
 
 === Deploy via Template
